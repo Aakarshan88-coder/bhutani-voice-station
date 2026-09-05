@@ -1,0 +1,463 @@
+
+/* =========================
+   WORK PAGE
+========================= */
+
+.work-page {
+  background: #0b0b0b;
+  color: #f2eee7;
+  min-height: 100vh;
+}
+
+
+/* =========================
+   WORK HERO
+========================= */
+
+.work-hero {
+  padding: 150px 8vw 90px;
+  border-bottom: 1px solid rgba(242, 238, 231, 0.1);
+}
+
+.work-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 100px;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.28em;
+  color: rgba(242, 238, 231, 0.45);
+}
+
+.work-top span:first-child {
+  color: #b8944c;
+}
+
+.work-heading p:first-child {
+  margin: 0 0 22px;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  color: #b8944c;
+}
+
+.work-heading h1 {
+  margin: 0;
+
+  font-family: "Italiana", serif;
+  font-size: clamp(80px, 11vw, 170px);
+  font-weight: 400;
+  line-height: 0.82;
+  letter-spacing: -0.025em;
+}
+
+.work-heading h1 span {
+  color: #b8944c;
+}
+
+.work-intro {
+  max-width: 470px;
+
+  margin: 55px 0 0 35vw;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.8;
+
+  color: rgba(242, 238, 231, 0.55);
+}
+
+
+/* =========================
+   WORK GRID
+========================= */
+
+.work-grid-section {
+  padding: 100px 8vw 130px;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 90px 45px;
+}
+
+
+/* =========================
+   WORK CARD
+========================= */
+
+.work-card {
+  min-width: 0;
+}
+
+.work-video {
+  position: relative;
+
+  display: block;
+
+  width: 100%;
+  aspect-ratio: 16 / 9;
+
+  overflow: hidden;
+
+  background: #151515;
+
+  text-decoration: none;
+}
+
+.work-video img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  filter: grayscale(20%);
+  transform: scale(1.01);
+
+  transition:
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.6s ease;
+}
+
+
+/* Dark cinematic overlay */
+
+.work-video::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.15) 0%,
+      rgba(0, 0, 0, 0.05) 45%,
+      rgba(0, 0, 0, 0.72) 100%
+    );
+
+  pointer-events: none;
+
+  transition: background 0.5s ease;
+}
+
+
+/* Hover */
+
+.work-video:hover img {
+  transform: scale(1.06);
+  filter: grayscale(0%);
+}
+
+.work-video:hover::after {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.1) 0%,
+      rgba(0, 0, 0, 0.05) 45%,
+      rgba(0, 0, 0, 0.62) 100%
+    );
+}
+
+
+/* =========================
+   PLAY BUTTON
+========================= */
+
+.play-button {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  z-index: 3;
+
+  width: 68px;
+  height: 68px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform: translate(-50%, -50%);
+
+  border: 1px solid rgba(242, 238, 231, 0.6);
+  border-radius: 50%;
+
+  font-size: 15px;
+
+  color: #f2eee7;
+  background: rgba(11, 11, 11, 0.35);
+
+  backdrop-filter: blur(8px);
+
+  transition:
+    transform 0.4s ease,
+    background 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.work-video:hover .play-button {
+  transform: translate(-50%, -50%) scale(1.12);
+
+  background: #b8944c;
+  border-color: #b8944c;
+
+  color: #0b0b0b;
+}
+
+
+/* =========================
+   CARD OVERLAY DETAILS
+========================= */
+
+.work-number {
+  position: absolute;
+
+  top: 22px;
+  left: 24px;
+
+  z-index: 4;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+
+  color: rgba(242, 238, 231, 0.8);
+}
+
+.work-open {
+  position: absolute;
+
+  right: 24px;
+  bottom: 22px;
+
+  z-index: 4;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 9px;
+  letter-spacing: 0.22em;
+
+  color: #f2eee7;
+}
+
+
+/* =========================
+   CARD INFO
+========================= */
+
+.work-card-info {
+  padding-top: 24px;
+}
+
+.work-card-meta {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 14px;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 9px;
+  letter-spacing: 0.22em;
+
+  color: #b8944c;
+}
+
+.work-card-meta span:last-child {
+  color: rgba(242, 238, 231, 0.3);
+}
+
+.work-card-info h2 {
+  margin: 0;
+
+  font-family: "Italiana", serif;
+  font-size: clamp(32px, 3vw, 48px);
+  font-weight: 400;
+  line-height: 1;
+
+  color: #f2eee7;
+}
+
+.work-card-info p {
+  max-width: 430px;
+
+  margin: 17px 0 0;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.7;
+
+  color: rgba(242, 238, 231, 0.48);
+}
+
+
+/* =========================
+   BOTTOM CTA
+========================= */
+
+.work-bottom {
+  padding: 75px 8vw;
+
+  border-top: 1px solid rgba(242, 238, 231, 0.1);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.work-bottom p {
+  margin: 0;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.25em;
+
+  color: rgba(242, 238, 231, 0.4);
+}
+
+.work-bottom a {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+
+  color: #f2eee7;
+  text-decoration: none;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+
+  transition: color 0.3s ease;
+}
+
+.work-bottom a span {
+  color: #b8944c;
+  font-size: 18px;
+
+  transition: transform 0.3s ease;
+}
+
+.work-bottom a:hover {
+  color: #b8944c;
+}
+
+.work-bottom a:hover span {
+  transform: translateX(6px);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+  .work-hero {
+    padding: 130px 6vw 75px;
+  }
+
+  .work-top {
+    margin-bottom: 75px;
+  }
+
+  .work-grid-section {
+    padding: 75px 6vw 100px;
+  }
+
+  .work-grid {
+    gap: 65px 25px;
+  }
+
+  .work-intro {
+    margin-left: 20vw;
+  }
+
+  .work-bottom {
+    padding: 60px 6vw;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+  .work-hero {
+    padding: 120px 6vw 65px;
+  }
+
+  .work-top {
+    margin-bottom: 65px;
+
+    font-size: 8px;
+    letter-spacing: 0.2em;
+  }
+
+  .work-heading h1 {
+    font-size: clamp(65px, 19vw, 100px);
+  }
+
+  .work-intro {
+    margin: 40px 0 0;
+    max-width: 350px;
+  }
+
+  .work-grid-section {
+    padding: 65px 6vw 80px;
+  }
+
+  .work-grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .work-video {
+    aspect-ratio: 16 / 10;
+  }
+
+  .play-button {
+    width: 58px;
+    height: 58px;
+  }
+
+  .work-number {
+    top: 17px;
+    left: 18px;
+  }
+
+  .work-open {
+    right: 18px;
+    bottom: 17px;
+  }
+
+  .work-card-info {
+    padding-top: 20px;
+  }
+
+  .work-card-info h2 {
+    font-size: 38px;
+  }
+
+  .work-card-info p {
+    font-size: 12px;
+  }
+
+  .work-bottom {
+    padding: 55px 6vw;
+
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
