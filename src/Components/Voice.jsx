@@ -44,6 +44,13 @@ function Voice() {
       description: "Dark • Dramatic • Atmospheric",
       audio: "/audio/horror story sample.wav",
     },
+    {
+      number: "07",
+      title: "Unofficial Maggi Ad Demo",
+      type: "Unofficial Ad Demo",
+      description: "Maggi • Commercial Voice Sample",
+      audio: "/audio/Maggi ad demo.wav",
+    },
   ];
 
   return (

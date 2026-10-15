@@ -1,0 +1,119 @@
+.voice-course-page {
+  display: flex;
+  align-items: center;
+  background:
+    radial-gradient(circle at 74% 45%, rgba(196, 154, 91, 0.09), transparent 34%),
+    #0b0b0b;
+}
+
+.voice-course {
+  width: min(1120px, 84vw);
+  margin: 0 auto;
+  padding: 76px 0 96px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
+  align-items: center;
+  gap: clamp(48px, 9vw, 130px);
+}
+
+.voice-course-eyebrow {
+  margin: 0 0 28px;
+  color: #c49a5b;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  line-height: 1.8;
+}
+
+.voice-course-copy h1 {
+  margin: 0;
+  color: #f5f3ee;
+  font-family: "Italiana", serif;
+  font-size: clamp(64px, 8vw, 108px);
+  font-weight: 400;
+  line-height: 0.88;
+}
+
+.voice-course-copy h1 span {
+  color: #c49a5b;
+}
+
+.voice-course-description {
+  max-width: 420px;
+  margin: 30px 0 0;
+  color: rgba(242, 238, 231, 0.62);
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+.voice-course-poster {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(196, 154, 91, 0.48);
+  background: linear-gradient(145deg, #171614, #0b0b0b 70%);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+}
+
+.voice-course-poster img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.voice-course-poster-placeholder {
+  width: 100%;
+  height: 100%;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.voice-course-poster-mark {
+  color: #c49a5b;
+  font-size: 11px;
+  letter-spacing: 0.28em;
+}
+
+.voice-course-poster-title {
+  color: #f5f3ee;
+  font-family: "Italiana", serif;
+  font-size: clamp(34px, 5vw, 52px);
+}
+
+.voice-course-poster-hint {
+  max-width: 250px;
+  color: rgba(242, 238, 231, 0.48);
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+@media (max-width: 700px) {
+  .voice-course {
+    width: 88vw;
+    padding: 62px 0 76px;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .voice-course-copy h1 {
+    font-size: clamp(62px, 16vw, 88px);
+  }
+
+  .voice-course-description {
+    margin-top: 22px;
+    font-size: 14px;
+  }
+
+  .voice-course-poster {
+    width: min(100%, 400px);
+    justify-self: center;
+  }
+}

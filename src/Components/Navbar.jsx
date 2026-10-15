@@ -24,6 +24,10 @@ function Navbar() {
           Voice
         </a>
 
+        <a href="/voiceover-course" className="nav-course-link" onClick={closeMenu}>
+          Voice-Over Course
+        </a>
+
         <a href="/services" onClick={closeMenu}>
           Services
         </a>
